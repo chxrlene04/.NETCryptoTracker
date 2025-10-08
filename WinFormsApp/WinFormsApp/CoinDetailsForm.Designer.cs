@@ -190,7 +190,7 @@
             lblChange24h.ForeColor = Color.Green;
             lblChange24h.Location = new Point(180, 250);
             lblChange24h.Name = "lblChange24h";
-            lblChange24h.Size = new Size(43, 30);
+            lblChange24h.Size = new Size(45, 30);
             lblChange24h.TabIndex = 12;
             lblChange24h.Text = "0%";
             // 
@@ -218,7 +218,7 @@
             // 
             volumeLabel.AutoSize = true;
             volumeLabel.Font = new Font("Segoe UI", 9F);
-            volumeLabel.Location = new Point(520, 235);
+            volumeLabel.Location = new Point(720, 235);
             volumeLabel.Name = "volumeLabel";
             volumeLabel.Size = new Size(50, 15);
             volumeLabel.TabIndex = 15;
@@ -228,7 +228,7 @@
             // 
             lblVolume.AutoSize = true;
             lblVolume.Font = new Font("Segoe UI", 16F, FontStyle.Bold);
-            lblVolume.Location = new Point(520, 250);
+            lblVolume.Location = new Point(720, 250);
             lblVolume.Name = "lblVolume";
             lblVolume.Size = new Size(39, 30);
             lblVolume.TabIndex = 16;

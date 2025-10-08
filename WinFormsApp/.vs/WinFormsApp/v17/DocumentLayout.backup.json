@@ -3,44 +3,52 @@
   "WorkspaceRootPath": "C:\\Users\\nicke\\source\\repos\\.NETCryptoTracker\\WinFormsApp\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{21D37594-E976-4813-A579-E835A5503125}|WinFormsApp\\WinFormsApp.csproj|c:\\users\\nicke\\source\\repos\\.netcryptotracker\\winformsapp\\winformsapp\\dashboardform.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{21D37594-E976-4813-A579-E835A5503125}|WinFormsApp\\WinFormsApp.csproj|solutionrelative:winformsapp\\dashboardform.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{21D37594-E976-4813-A579-E835A5503125}|WinFormsApp\\WinFormsApp.csproj|c:\\users\\nicke\\source\\repos\\.netcryptotracker\\winformsapp\\winformsapp\\services\\cryptoservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{21D37594-E976-4813-A579-E835A5503125}|WinFormsApp\\WinFormsApp.csproj|solutionrelative:winformsapp\\services\\cryptoservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{21D37594-E976-4813-A579-E835A5503125}|WinFormsApp\\WinFormsApp.csproj|c:\\users\\nicke\\source\\repos\\.netcryptotracker\\winformsapp\\winformsapp\\coindetailsform.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
-      "RelativeMoniker": "D:0:0:{21D37594-E976-4813-A579-E835A5503125}|WinFormsApp\\WinFormsApp.csproj|solutionrelative:winformsapp\\coindetailsform.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{21D37594-E976-4813-A579-E835A5503125}|WinFormsApp\\WinFormsApp.csproj|c:\\users\\nicke\\source\\repos\\.netcryptotracker\\winformsapp\\winformsapp\\coindetailsform.designer.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{21D37594-E976-4813-A579-E835A5503125}|WinFormsApp\\WinFormsApp.csproj|solutionrelative:winformsapp\\coindetailsform.designer.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{21D37594-E976-4813-A579-E835A5503125}|WinFormsApp\\WinFormsApp.csproj|c:\\users\\nicke\\source\\repos\\.netcryptotracker\\winformsapp\\winformsapp\\services\\icryptoservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{21D37594-E976-4813-A579-E835A5503125}|WinFormsApp\\WinFormsApp.csproj|solutionrelative:winformsapp\\services\\icryptoservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{21D37594-E976-4813-A579-E835A5503125}|WinFormsApp\\WinFormsApp.csproj|c:\\users\\nicke\\source\\repos\\.netcryptotracker\\winformsapp\\winformsapp\\coindetailsform.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{21D37594-E976-4813-A579-E835A5503125}|WinFormsApp\\WinFormsApp.csproj|solutionrelative:winformsapp\\coindetailsform.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{21D37594-E976-4813-A579-E835A5503125}|WinFormsApp\\WinFormsApp.csproj|c:\\users\\nicke\\source\\repos\\.netcryptotracker\\winformsapp\\winformsapp\\dashboardform.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
-      "RelativeMoniker": "D:0:0:{21D37594-E976-4813-A579-E835A5503125}|WinFormsApp\\WinFormsApp.csproj|solutionrelative:winformsapp\\dashboardform.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
-    },
-    {
       "AbsoluteMoniker": "D:0:0:{21D37594-E976-4813-A579-E835A5503125}|WinFormsApp\\WinFormsApp.csproj|c:\\users\\nicke\\source\\repos\\.netcryptotracker\\winformsapp\\winformsapp\\dashboardform.designer.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{21D37594-E976-4813-A579-E835A5503125}|WinFormsApp\\WinFormsApp.csproj|solutionrelative:winformsapp\\dashboardform.designer.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{21D37594-E976-4813-A579-E835A5503125}|WinFormsApp\\WinFormsApp.csproj|c:\\users\\nicke\\source\\repos\\.netcryptotracker\\winformsapp\\winformsapp\\services\\cryptoservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{21D37594-E976-4813-A579-E835A5503125}|WinFormsApp\\WinFormsApp.csproj|solutionrelative:winformsapp\\services\\cryptoservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{21D37594-E976-4813-A579-E835A5503125}|WinFormsApp\\WinFormsApp.csproj|c:\\users\\nicke\\source\\repos\\.netcryptotracker\\winformsapp\\winformsapp\\services\\portfolioservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{21D37594-E976-4813-A579-E835A5503125}|WinFormsApp\\WinFormsApp.csproj|solutionrelative:winformsapp\\services\\portfolioservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{21D37594-E976-4813-A579-E835A5503125}|WinFormsApp\\WinFormsApp.csproj|c:\\users\\nicke\\source\\repos\\.netcryptotracker\\winformsapp\\winformsapp\\coindetailsform.designer.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{21D37594-E976-4813-A579-E835A5503125}|WinFormsApp\\WinFormsApp.csproj|solutionrelative:winformsapp\\coindetailsform.designer.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{21D37594-E976-4813-A579-E835A5503125}|WinFormsApp\\WinFormsApp.csproj|c:\\users\\nicke\\source\\repos\\.netcryptotracker\\winformsapp\\winformsapp\\services\\idataservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{21D37594-E976-4813-A579-E835A5503125}|WinFormsApp\\WinFormsApp.csproj|solutionrelative:winformsapp\\services\\idataservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
+      "AbsoluteMoniker": "D:0:0:{21D37594-E976-4813-A579-E835A5503125}|WinFormsApp\\WinFormsApp.csproj|c:\\users\\nicke\\source\\repos\\.netcryptotracker\\winformsapp\\winformsapp\\coindetailsform.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
+      "RelativeMoniker": "D:0:0:{21D37594-E976-4813-A579-E835A5503125}|WinFormsApp\\WinFormsApp.csproj|solutionrelative:winformsapp\\coindetailsform.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{21D37594-E976-4813-A579-E835A5503125}|WinFormsApp\\WinFormsApp.csproj|c:\\users\\nicke\\source\\repos\\.netcryptotracker\\winformsapp\\winformsapp\\dashboardform.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{21D37594-E976-4813-A579-E835A5503125}|WinFormsApp\\WinFormsApp.csproj|solutionrelative:winformsapp\\dashboardform.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{21D37594-E976-4813-A579-E835A5503125}|WinFormsApp\\WinFormsApp.csproj|c:\\users\\nicke\\source\\repos\\.netcryptotracker\\winformsapp\\winformsapp\\dashboardform.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
+      "RelativeMoniker": "D:0:0:{21D37594-E976-4813-A579-E835A5503125}|WinFormsApp\\WinFormsApp.csproj|solutionrelative:winformsapp\\dashboardform.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{21D37594-E976-4813-A579-E835A5503125}|WinFormsApp\\WinFormsApp.csproj|c:\\users\\nicke\\source\\repos\\.netcryptotracker\\winformsapp\\winformsapp\\helpers\\navmanager.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{21D37594-E976-4813-A579-E835A5503125}|WinFormsApp\\WinFormsApp.csproj|solutionrelative:winformsapp\\helpers\\navmanager.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
       "AbsoluteMoniker": "D:0:0:{21D37594-E976-4813-A579-E835A5503125}|WinFormsApp\\WinFormsApp.csproj|c:\\users\\nicke\\source\\repos\\.netcryptotracker\\winformsapp\\winformsapp\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{21D37594-E976-4813-A579-E835A5503125}|WinFormsApp\\WinFormsApp.csproj|solutionrelative:winformsapp\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{21D37594-E976-4813-A579-E835A5503125}|WinFormsApp\\WinFormsApp.csproj|c:\\users\\nicke\\source\\repos\\.netcryptotracker\\winformsapp\\winformsapp\\services\\portfolioservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{21D37594-E976-4813-A579-E835A5503125}|WinFormsApp\\WinFormsApp.csproj|solutionrelative:winformsapp\\services\\portfolioservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{21D37594-E976-4813-A579-E835A5503125}|WinFormsApp\\WinFormsApp.csproj|c:\\users\\nicke\\source\\repos\\.netcryptotracker\\winformsapp\\winformsapp\\models\\coin.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
@@ -55,20 +63,8 @@
       "RelativeMoniker": "D:0:0:{21D37594-E976-4813-A579-E835A5503125}|WinFormsApp\\WinFormsApp.csproj|solutionrelative:winformsapp\\models\\transaction.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{21D37594-E976-4813-A579-E835A5503125}|WinFormsApp\\WinFormsApp.csproj|c:\\users\\nicke\\source\\repos\\.netcryptotracker\\winformsapp\\winformsapp\\services\\icryptoservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{21D37594-E976-4813-A579-E835A5503125}|WinFormsApp\\WinFormsApp.csproj|solutionrelative:winformsapp\\services\\icryptoservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
       "AbsoluteMoniker": "D:0:0:{21D37594-E976-4813-A579-E835A5503125}|WinFormsApp\\WinFormsApp.csproj|c:\\users\\nicke\\source\\repos\\.netcryptotracker\\winformsapp\\winformsapp\\services\\transactionservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{21D37594-E976-4813-A579-E835A5503125}|WinFormsApp\\WinFormsApp.csproj|solutionrelative:winformsapp\\services\\transactionservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{21D37594-E976-4813-A579-E835A5503125}|WinFormsApp\\WinFormsApp.csproj|c:\\users\\nicke\\source\\repos\\.netcryptotracker\\winformsapp\\winformsapp\\form1.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
-      "RelativeMoniker": "D:0:0:{21D37594-E976-4813-A579-E835A5503125}|WinFormsApp\\WinFormsApp.csproj|solutionrelative:winformsapp\\form1.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{21D37594-E976-4813-A579-E835A5503125}|WinFormsApp\\WinFormsApp.csproj|c:\\users\\nicke\\source\\repos\\.netcryptotracker\\winformsapp\\winformsapp\\form1.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{21D37594-E976-4813-A579-E835A5503125}|WinFormsApp\\WinFormsApp.csproj|solutionrelative:winformsapp\\form1.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     }
   ],
   "DocumentGroupContainers": [
@@ -78,7 +74,7 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 9,
+          "SelectedChildIndex": 6,
           "Children": [
             {
               "$type": "Bookmark",
@@ -90,70 +86,20 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 3,
+              "DocumentIndex": 2,
               "Title": "CoinDetailsForm.cs",
               "DocumentMoniker": "C:\\Users\\nicke\\source\\repos\\.NETCryptoTracker\\WinFormsApp\\WinFormsApp\\CoinDetailsForm.cs",
               "RelativeDocumentMoniker": "WinFormsApp\\CoinDetailsForm.cs",
               "ToolTip": "C:\\Users\\nicke\\source\\repos\\.NETCryptoTracker\\WinFormsApp\\WinFormsApp\\CoinDetailsForm.cs",
               "RelativeToolTip": "WinFormsApp\\CoinDetailsForm.cs",
-              "ViewState": "AgIAACEAAAAAAAAAAAAqwCYAAAANAAAAAAAAAA==",
+              "ViewState": "AgIAACkAAAAAAAAAAAAwwAwAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2025-10-08T08:20:47.875Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 2,
-              "Title": "CoinDetailsForm.Designer.cs",
-              "DocumentMoniker": "C:\\Users\\nicke\\source\\repos\\.NETCryptoTracker\\WinFormsApp\\WinFormsApp\\CoinDetailsForm.Designer.cs",
-              "RelativeDocumentMoniker": "WinFormsApp\\CoinDetailsForm.Designer.cs",
-              "ToolTip": "C:\\Users\\nicke\\source\\repos\\.NETCryptoTracker\\WinFormsApp\\WinFormsApp\\CoinDetailsForm.Designer.cs",
-              "RelativeToolTip": "WinFormsApp\\CoinDetailsForm.Designer.cs",
-              "ViewState": "AgIAAOYAAAAAAAAAAAAqwCYBAAAiAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-10-08T08:15:24.31Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 1,
-              "Title": "CoinDetailsForm.cs [Design]",
-              "DocumentMoniker": "C:\\Users\\nicke\\source\\repos\\.NETCryptoTracker\\WinFormsApp\\WinFormsApp\\CoinDetailsForm.cs",
-              "RelativeDocumentMoniker": "WinFormsApp\\CoinDetailsForm.cs",
-              "ToolTip": "C:\\Users\\nicke\\source\\repos\\.NETCryptoTracker\\WinFormsApp\\WinFormsApp\\CoinDetailsForm.cs [Design]",
-              "RelativeToolTip": "WinFormsApp\\CoinDetailsForm.cs [Design]",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-10-08T08:14:00.402Z",
-              "EditorCaption": " [Design]"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 4,
-              "Title": "DashboardForm.cs [Design]",
-              "DocumentMoniker": "C:\\Users\\nicke\\source\\repos\\.NETCryptoTracker\\WinFormsApp\\WinFormsApp\\DashboardForm.cs",
-              "RelativeDocumentMoniker": "WinFormsApp\\DashboardForm.cs",
-              "ToolTip": "C:\\Users\\nicke\\source\\repos\\.NETCryptoTracker\\WinFormsApp\\WinFormsApp\\DashboardForm.cs [Design]",
-              "RelativeToolTip": "WinFormsApp\\DashboardForm.cs [Design]",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-10-08T07:39:36.604Z",
-              "EditorCaption": " [Design]"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 6,
-              "Title": "CryptoService.cs",
-              "DocumentMoniker": "C:\\Users\\nicke\\source\\repos\\.NETCryptoTracker\\WinFormsApp\\WinFormsApp\\Services\\CryptoService.cs",
-              "RelativeDocumentMoniker": "WinFormsApp\\Services\\CryptoService.cs",
-              "ToolTip": "C:\\Users\\nicke\\source\\repos\\.NETCryptoTracker\\WinFormsApp\\WinFormsApp\\Services\\CryptoService.cs",
-              "RelativeToolTip": "WinFormsApp\\Services\\CryptoService.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAABIAAAAqAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-10-08T07:23:54.203Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 8,
+              "DocumentIndex": 5,
               "Title": "IDataService.cs",
               "DocumentMoniker": "C:\\Users\\nicke\\source\\repos\\.NETCryptoTracker\\WinFormsApp\\WinFormsApp\\Services\\IDataService.cs",
               "RelativeDocumentMoniker": "WinFormsApp\\Services\\IDataService.cs",
@@ -166,7 +112,46 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 5,
+              "DocumentIndex": 7,
+              "Title": "DashboardForm.cs",
+              "DocumentMoniker": "C:\\Users\\nicke\\source\\repos\\.NETCryptoTracker\\WinFormsApp\\WinFormsApp\\DashboardForm.cs",
+              "RelativeDocumentMoniker": "WinFormsApp\\DashboardForm.cs",
+              "ToolTip": "C:\\Users\\nicke\\source\\repos\\.NETCryptoTracker\\WinFormsApp\\WinFormsApp\\DashboardForm.cs",
+              "RelativeToolTip": "WinFormsApp\\DashboardForm.cs",
+              "ViewState": "AgIAAAgBAAAAAAAAAAAqwEYBAAATAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-10-08T06:44:00.613Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 4,
+              "Title": "CoinDetailsForm.Designer.cs",
+              "DocumentMoniker": "C:\\Users\\nicke\\source\\repos\\.NETCryptoTracker\\WinFormsApp\\WinFormsApp\\CoinDetailsForm.Designer.cs",
+              "RelativeDocumentMoniker": "WinFormsApp\\CoinDetailsForm.Designer.cs",
+              "ToolTip": "C:\\Users\\nicke\\source\\repos\\.NETCryptoTracker\\WinFormsApp\\WinFormsApp\\CoinDetailsForm.Designer.cs",
+              "RelativeToolTip": "WinFormsApp\\CoinDetailsForm.Designer.cs",
+              "ViewState": "AgIAAMIAAAAAAAAAAAAqwCYBAAAiAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-10-08T08:15:24.31Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "CryptoService.cs",
+              "DocumentMoniker": "C:\\Users\\nicke\\source\\repos\\.NETCryptoTracker\\WinFormsApp\\WinFormsApp\\Services\\CryptoService.cs",
+              "RelativeDocumentMoniker": "WinFormsApp\\Services\\CryptoService.cs",
+              "ToolTip": "C:\\Users\\nicke\\source\\repos\\.NETCryptoTracker\\WinFormsApp\\WinFormsApp\\Services\\CryptoService.cs",
+              "RelativeToolTip": "WinFormsApp\\Services\\CryptoService.cs",
+              "ViewState": "AgIAABUAAAAAAAAAAAAowEAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-10-08T07:23:54.203Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 3,
               "Title": "DashboardForm.Designer.cs",
               "DocumentMoniker": "C:\\Users\\nicke\\source\\repos\\.NETCryptoTracker\\WinFormsApp\\WinFormsApp\\DashboardForm.Designer.cs",
               "RelativeDocumentMoniker": "WinFormsApp\\DashboardForm.Designer.cs",
@@ -179,20 +164,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 0,
-              "Title": "DashboardForm.cs",
-              "DocumentMoniker": "C:\\Users\\nicke\\source\\repos\\.NETCryptoTracker\\WinFormsApp\\WinFormsApp\\DashboardForm.cs",
-              "RelativeDocumentMoniker": "WinFormsApp\\DashboardForm.cs",
-              "ToolTip": "C:\\Users\\nicke\\source\\repos\\.NETCryptoTracker\\WinFormsApp\\WinFormsApp\\DashboardForm.cs",
-              "RelativeToolTip": "WinFormsApp\\DashboardForm.cs",
-              "ViewState": "AgIAABwBAAAAAAAAAAA4wDkBAAASAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-10-08T06:44:00.613Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 13,
+              "DocumentIndex": 1,
               "Title": "ICryptoService.cs",
               "DocumentMoniker": "C:\\Users\\nicke\\source\\repos\\.NETCryptoTracker\\WinFormsApp\\WinFormsApp\\Services\\ICryptoService.cs",
               "RelativeDocumentMoniker": "WinFormsApp\\Services\\ICryptoService.cs",
@@ -205,33 +177,44 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 12,
-              "Title": "Transaction.cs",
-              "DocumentMoniker": "C:\\Users\\nicke\\source\\repos\\.NETCryptoTracker\\WinFormsApp\\WinFormsApp\\Models\\Transaction.cs",
-              "RelativeDocumentMoniker": "WinFormsApp\\Models\\Transaction.cs",
-              "ToolTip": "C:\\Users\\nicke\\source\\repos\\.NETCryptoTracker\\WinFormsApp\\WinFormsApp\\Models\\Transaction.cs",
-              "RelativeToolTip": "WinFormsApp\\Models\\Transaction.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAgAAAABAAAAAAAAAA==",
+              "DocumentIndex": 8,
+              "Title": "DashboardForm.cs [Design]",
+              "DocumentMoniker": "C:\\Users\\nicke\\source\\repos\\.NETCryptoTracker\\WinFormsApp\\WinFormsApp\\DashboardForm.cs",
+              "RelativeDocumentMoniker": "WinFormsApp\\DashboardForm.cs",
+              "ToolTip": "C:\\Users\\nicke\\source\\repos\\.NETCryptoTracker\\WinFormsApp\\WinFormsApp\\DashboardForm.cs [Design]",
+              "RelativeToolTip": "WinFormsApp\\DashboardForm.cs [Design]",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-10-08T07:21:07.628Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-10-08T07:39:36.604Z",
+              "EditorCaption": " [Design]"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 6,
+              "Title": "CoinDetailsForm.cs [Design]",
+              "DocumentMoniker": "C:\\Users\\nicke\\source\\repos\\.NETCryptoTracker\\WinFormsApp\\WinFormsApp\\CoinDetailsForm.cs",
+              "RelativeDocumentMoniker": "WinFormsApp\\CoinDetailsForm.cs",
+              "ToolTip": "C:\\Users\\nicke\\source\\repos\\.NETCryptoTracker\\WinFormsApp\\WinFormsApp\\CoinDetailsForm.cs [Design]",
+              "RelativeToolTip": "WinFormsApp\\CoinDetailsForm.cs [Design]",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-10-08T08:14:00.402Z",
+              "EditorCaption": " [Design]"
             },
             {
               "$type": "Document",
               "DocumentIndex": 9,
-              "Title": "Program.cs",
-              "DocumentMoniker": "C:\\Users\\nicke\\source\\repos\\.NETCryptoTracker\\WinFormsApp\\WinFormsApp\\Program.cs",
-              "RelativeDocumentMoniker": "WinFormsApp\\Program.cs",
-              "ToolTip": "C:\\Users\\nicke\\source\\repos\\.NETCryptoTracker\\WinFormsApp\\WinFormsApp\\Program.cs",
-              "RelativeToolTip": "WinFormsApp\\Program.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAABUAAAAFAAAAAAAAAA==",
+              "Title": "NavManager.cs",
+              "DocumentMoniker": "C:\\Users\\nicke\\source\\repos\\.NETCryptoTracker\\WinFormsApp\\WinFormsApp\\Helpers\\NavManager.cs",
+              "RelativeDocumentMoniker": "WinFormsApp\\Helpers\\NavManager.cs",
+              "ToolTip": "C:\\Users\\nicke\\source\\repos\\.NETCryptoTracker\\WinFormsApp\\WinFormsApp\\Helpers\\NavManager.cs",
+              "RelativeToolTip": "WinFormsApp\\Helpers\\NavManager.cs",
+              "ViewState": "AgIAAAkAAAAAAAAAAAAAAB8AAABLAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-10-08T07:21:37.47Z",
+              "WhenOpened": "2025-10-08T09:55:45.744Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 7,
+              "DocumentIndex": 11,
               "Title": "PortfolioService.cs",
               "DocumentMoniker": "C:\\Users\\nicke\\source\\repos\\.NETCryptoTracker\\WinFormsApp\\WinFormsApp\\Services\\PortfolioService.cs",
               "RelativeDocumentMoniker": "WinFormsApp\\Services\\PortfolioService.cs",
@@ -244,7 +227,33 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 11,
+              "DocumentIndex": 10,
+              "Title": "Program.cs",
+              "DocumentMoniker": "C:\\Users\\nicke\\source\\repos\\.NETCryptoTracker\\WinFormsApp\\WinFormsApp\\Program.cs",
+              "RelativeDocumentMoniker": "WinFormsApp\\Program.cs",
+              "ToolTip": "C:\\Users\\nicke\\source\\repos\\.NETCryptoTracker\\WinFormsApp\\WinFormsApp\\Program.cs",
+              "RelativeToolTip": "WinFormsApp\\Program.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABUAAAAFAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-10-08T07:21:37.47Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 14,
+              "Title": "Transaction.cs",
+              "DocumentMoniker": "C:\\Users\\nicke\\source\\repos\\.NETCryptoTracker\\WinFormsApp\\WinFormsApp\\Models\\Transaction.cs",
+              "RelativeDocumentMoniker": "WinFormsApp\\Models\\Transaction.cs",
+              "ToolTip": "C:\\Users\\nicke\\source\\repos\\.NETCryptoTracker\\WinFormsApp\\WinFormsApp\\Models\\Transaction.cs",
+              "RelativeToolTip": "WinFormsApp\\Models\\Transaction.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAgAAAABAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-10-08T07:21:07.628Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 13,
               "Title": "PortfolioItem.cs",
               "DocumentMoniker": "C:\\Users\\nicke\\source\\repos\\.NETCryptoTracker\\WinFormsApp\\WinFormsApp\\Models\\PortfolioItem.cs",
               "RelativeDocumentMoniker": "WinFormsApp\\Models\\PortfolioItem.cs",
@@ -257,7 +266,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 10,
+              "DocumentIndex": 12,
               "Title": "Coin.cs",
               "DocumentMoniker": "C:\\Users\\nicke\\source\\repos\\.NETCryptoTracker\\WinFormsApp\\WinFormsApp\\Models\\Coin.cs",
               "RelativeDocumentMoniker": "WinFormsApp\\Models\\Coin.cs",
@@ -270,7 +279,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 14,
+              "DocumentIndex": 15,
               "Title": "TransactionService.cs",
               "DocumentMoniker": "C:\\Users\\nicke\\source\\repos\\.NETCryptoTracker\\WinFormsApp\\WinFormsApp\\Services\\TransactionService.cs",
               "RelativeDocumentMoniker": "WinFormsApp\\Services\\TransactionService.cs",
@@ -279,31 +288,6 @@
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAA4AAAAwAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2025-10-08T07:23:45.295Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 15,
-              "Title": "Form1.cs [Design]",
-              "DocumentMoniker": "C:\\Users\\nicke\\source\\repos\\.NETCryptoTracker\\WinFormsApp\\WinFormsApp\\Form1.cs",
-              "RelativeDocumentMoniker": "WinFormsApp\\Form1.cs",
-              "ToolTip": "C:\\Users\\nicke\\source\\repos\\.NETCryptoTracker\\WinFormsApp\\WinFormsApp\\Form1.cs [Design]",
-              "RelativeToolTip": "WinFormsApp\\Form1.cs [Design]",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-10-08T07:32:14.381Z",
-              "EditorCaption": " [Design]"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 16,
-              "Title": "Form1.cs",
-              "DocumentMoniker": "C:\\Users\\nicke\\source\\repos\\.NETCryptoTracker\\WinFormsApp\\WinFormsApp\\Form1.cs",
-              "RelativeDocumentMoniker": "WinFormsApp\\Form1.cs",
-              "ToolTip": "C:\\Users\\nicke\\source\\repos\\.NETCryptoTracker\\WinFormsApp\\WinFormsApp\\Form1.cs",
-              "RelativeToolTip": "WinFormsApp\\Form1.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-10-08T07:32:16.64Z",
               "EditorCaption": ""
             }
           ]

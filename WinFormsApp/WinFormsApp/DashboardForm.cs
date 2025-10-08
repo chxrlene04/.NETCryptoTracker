@@ -1,5 +1,6 @@
 ﻿using WinFormsApp.Models;
 using WinFormsApp.Services;
+using WinFormsApp.Helpers;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
@@ -38,7 +39,7 @@ namespace WinFormsApp
             RefreshDashboard();
 
             //navigation bar highlight (we are indeed on the dashboard page
-            HighlightNav();
+            NavManager.SetDefaultNavState(btnDashboard, btnCoinDetails, btnTransactions, btnTrending);
 
             // Wire up event handlers
             WireUpEvents();
@@ -52,13 +53,11 @@ namespace WinFormsApp
             btnAddCoin.Click += BtnAddCoin_Click;
 
             // Navigation buttons
-            btnDashboard.Click += (s, e) => HighlightButton(btnDashboard);
+            //btnDashboard.Click += (s, e) => HighlightButton(btnDashboard);
             btnCoinDetails.Click += BtnCoinDetails_Click;
             btnTransactions.Click += BtnTransactions_Click;
             btnTrending.Click += BtnTrending_Click;
 
-            // Highlight dashboard button on load
-            //HighlightButton(btnDashboard);
         }
 
         private void SetupDataGridView()
@@ -301,74 +300,64 @@ namespace WinFormsApp
         }
 
         // Navigation button handlers
+        private void BtnDashboard_Click(object sender, EventArgs e) => NavManager.HighlightButton(btnDashboard, panelTopNav);
+
         private void BtnCoinDetails_Click(object sender, EventArgs e)
         {
-            MessageBox.Show("Coin Details screen - Person 2's responsibility",
-                "Info", MessageBoxButtons.OK, MessageBoxIcon.Information);
-            HighlightButton(btnCoinDetails);
+            NavManager.HighlightButton(btnCoinDetails, panelTopNav);
 
             if (!this.GetType().Name.Equals("CoinDetailsForm"))
             {
                 var form = new CoinDetailsForm();
                 form.Show();
-                //this.Close();
             }
         }
 
-        private void BtnTransactions_Click(object sender, EventArgs e)
-        {
-            MessageBox.Show("Transactions screen - Person 3's responsibility",
-                "Info", MessageBoxButtons.OK, MessageBoxIcon.Information);
-            HighlightButton(btnTransactions);
-        }
+        private void BtnTransactions_Click(object sender, EventArgs e) => NavManager.HighlightButton(btnTransactions, panelTopNav);
 
-        private void BtnTrending_Click(object sender, EventArgs e)
-        {
-            MessageBox.Show("Trending screen - Bonus/split work",
-                "Info", MessageBoxButtons.OK, MessageBoxIcon.Information);
-            HighlightButton(btnTrending);
-        }
+        private void BtnTrending_Click(object sender, EventArgs e) => NavManager.HighlightButton(btnTrending, panelTopNav);
 
-        private void HighlightButton(Button activeButton)
-        {
-            // Reset all navigation buttons to default
-            foreach (Control control in panelTopNav.Controls)
-            {
-                if (control is Button btn)
-                {
-                    btn.BackColor = SystemColors.Control;
-                    btn.ForeColor = Color.Black;
-                }
-            }
 
-            // Highlight the active button
-            activeButton.BackColor = Color.DodgerBlue;
-            activeButton.ForeColor = Color.White;
-        }
-        private void HighlightNav()
-        {
-            btnDashboard.BackColor = Color.DodgerBlue;
-            btnDashboard.ForeColor = Color.White;
-
-            btnCoinDetails.BackColor = Color.FromArgb(45, 45, 48);
-            btnCoinDetails.ForeColor = Color.White;
-
-            btnTransactions.BackColor = Color.FromArgb(45, 45, 48);
-            btnTransactions.ForeColor = Color.White;
-
-            btnTrending.BackColor = Color.FromArgb(45, 45, 48);
-            btnTrending.ForeColor = Color.White;
-        }
-
-        //private void btnCoinDetails_Click(object sender, EventArgs e)
+        //private void HighlightButton(Button activeButton)
         //{
-        //    if (!this.GetType().Name.Equals("CoinDetailsForm"))
+        //    // Reset all navigation buttons to default
+        //    foreach (Control control in panelTopNav.Controls)
         //    {
-        //        var form = new CoinDetailsForm();
-        //        form.Show();
-        //        this.Close();
+        //        if (control is Button btn)
+        //        {
+        //            btn.BackColor = SystemColors.Control;
+        //            btn.ForeColor = Color.Black;
+        //        }
         //    }
+
+        //    // Highlight the active button
+        //    activeButton.BackColor = Color.DodgerBlue;
+        //    activeButton.ForeColor = Color.White;
         //}
+        //private void HighlightNav()
+        //{
+        //    btnDashboard.BackColor = Color.DodgerBlue;
+        //    btnDashboard.ForeColor = Color.White;
+
+        //    btnCoinDetails.BackColor = Color.FromArgb(45, 45, 48);
+        //    btnCoinDetails.ForeColor = Color.White;
+
+        //    btnTransactions.BackColor = Color.FromArgb(45, 45, 48);
+        //    btnTransactions.ForeColor = Color.White;
+
+        //    btnTrending.BackColor = Color.FromArgb(45, 45, 48);
+        //    btnTrending.ForeColor = Color.White;
+        //}
+
+        ////private void btnCoinDetails_Click(object sender, EventArgs e)
+        ////{
+        ////    if (!this.GetType().Name.Equals("CoinDetailsForm"))
+        ////    {
+        ////        var form = new CoinDetailsForm();
+        ////        form.Show();
+        ////        this.Close();
+        ////    }
+        ////}
 
 
     }

@@ -58,5 +58,10 @@ namespace WinFormsApp.Services
                 coin.Change24h = changePercent;
             }
         }
+        public List<Coin> GetAllCoins()
+        {
+            return _coins;
+        }
+
     }
 }
