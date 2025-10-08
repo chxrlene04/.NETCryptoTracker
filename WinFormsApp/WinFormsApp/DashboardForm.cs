@@ -37,6 +37,9 @@ namespace WinFormsApp
             // Load initial data
             RefreshDashboard();
 
+            //navigation bar highlight (we are indeed on the dashboard page
+            HighlightNav();
+
             // Wire up event handlers
             WireUpEvents();
         }
@@ -55,7 +58,7 @@ namespace WinFormsApp
             btnTrending.Click += BtnTrending_Click;
 
             // Highlight dashboard button on load
-            HighlightButton(btnDashboard);
+            //HighlightButton(btnDashboard);
         }
 
         private void SetupDataGridView()
@@ -303,6 +306,13 @@ namespace WinFormsApp
             MessageBox.Show("Coin Details screen - Person 2's responsibility",
                 "Info", MessageBoxButtons.OK, MessageBoxIcon.Information);
             HighlightButton(btnCoinDetails);
+
+            if (!this.GetType().Name.Equals("CoinDetailsForm"))
+            {
+                var form = new CoinDetailsForm();
+                form.Show();
+                //this.Close();
+            }
         }
 
         private void BtnTransactions_Click(object sender, EventArgs e)
@@ -335,5 +345,31 @@ namespace WinFormsApp
             activeButton.BackColor = Color.DodgerBlue;
             activeButton.ForeColor = Color.White;
         }
+        private void HighlightNav()
+        {
+            btnDashboard.BackColor = Color.DodgerBlue;
+            btnDashboard.ForeColor = Color.White;
+
+            btnCoinDetails.BackColor = Color.FromArgb(45, 45, 48);
+            btnCoinDetails.ForeColor = Color.White;
+
+            btnTransactions.BackColor = Color.FromArgb(45, 45, 48);
+            btnTransactions.ForeColor = Color.White;
+
+            btnTrending.BackColor = Color.FromArgb(45, 45, 48);
+            btnTrending.ForeColor = Color.White;
+        }
+
+        //private void btnCoinDetails_Click(object sender, EventArgs e)
+        //{
+        //    if (!this.GetType().Name.Equals("CoinDetailsForm"))
+        //    {
+        //        var form = new CoinDetailsForm();
+        //        form.Show();
+        //        this.Close();
+        //    }
+        //}
+
+
     }
 }
