@@ -1,24 +1,20 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\nicke\\source\\repos\\.NETCryptoTracker\\WinFormsApp\\WinFormsApp\\WinFormsApp.csproj": {}
+    "C:\\Users\\14286431\\Source\\Repos\\chxrlene04\\.NETCryptoTracker\\WinFormsApp\\WinFormsApp\\WinFormsApp.csproj": {}
   },
   "projects": {
-    "C:\\Users\\nicke\\source\\repos\\.NETCryptoTracker\\WinFormsApp\\WinFormsApp\\WinFormsApp.csproj": {
+    "C:\\Users\\14286431\\Source\\Repos\\chxrlene04\\.NETCryptoTracker\\WinFormsApp\\WinFormsApp\\WinFormsApp.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\nicke\\source\\repos\\.NETCryptoTracker\\WinFormsApp\\WinFormsApp\\WinFormsApp.csproj",
+        "projectUniqueName": "C:\\Users\\14286431\\Source\\Repos\\chxrlene04\\.NETCryptoTracker\\WinFormsApp\\WinFormsApp\\WinFormsApp.csproj",
         "projectName": "WinFormsApp",
-        "projectPath": "C:\\Users\\nicke\\source\\repos\\.NETCryptoTracker\\WinFormsApp\\WinFormsApp\\WinFormsApp.csproj",
-        "packagesPath": "C:\\Users\\nicke\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\nicke\\source\\repos\\.NETCryptoTracker\\WinFormsApp\\WinFormsApp\\obj\\",
+        "projectPath": "C:\\Users\\14286431\\Source\\Repos\\chxrlene04\\.NETCryptoTracker\\WinFormsApp\\WinFormsApp\\WinFormsApp.csproj",
+        "packagesPath": "C:\\Users\\14286431\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\14286431\\Source\\Repos\\chxrlene04\\.NETCryptoTracker\\WinFormsApp\\WinFormsApp\\obj\\",
         "projectStyle": "PackageReference",
-        "fallbackFolders": [
-          "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
-        ],
         "configFilePaths": [
-          "C:\\Users\\nicke\\AppData\\Roaming\\NuGet\\NuGet.Config",
-          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
+          "C:\\Users\\14286431\\AppData\\Roaming\\NuGet\\NuGet.Config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
         "originalTargetFrameworks": [
@@ -43,8 +39,7 @@
           "enableAudit": "true",
           "auditLevel": "low",
           "auditMode": "direct"
-        },
-        "SdkAnalysisLevel": "9.0.300"
+        }
       },
       "frameworks": {
         "net8.0-windows7.0": {
@@ -68,7 +63,7 @@
               "privateAssets": "none"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\9.0.305/PortableRuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\8.0.400/PortableRuntimeIdentifierGraph.json"
         }
       }
     }

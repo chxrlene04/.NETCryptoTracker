@@ -18,6 +18,7 @@ namespace WinFormsApp
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
             Application.Run(new DashboardForm());
+            Console.WriteLine("Hellow World!");
         }
     }
 }
