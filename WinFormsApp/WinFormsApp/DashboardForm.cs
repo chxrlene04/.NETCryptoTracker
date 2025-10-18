@@ -284,13 +284,18 @@ namespace WinFormsApp
 
         private void BtnViewTransactions_Click(object sender, EventArgs e)
         {
-            // Navigate to transactions form (you'll create this next)
-            MessageBox.Show("Transactions screen coming next!",
-                "Info", MessageBoxButtons.OK, MessageBoxIcon.Information);
-            // TODO: Open TransactionsForm
-            // var transactionsForm = new TransactionsForm(_transactionService, _cryptoService);
-            // transactionsForm.Show();
-            // this.Hide();
+            try
+            {
+                // Pass the shared service instances to maintain data consistency
+                var transactionsForm = new TransactionsForm(_transactionService, _cryptoService);
+                transactionsForm.Show();
+                //this.Hide();
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show($"Error opening transactions form: {ex.Message}",
+                    "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
         }
 
         private void BtnAddCoin_Click(object sender, EventArgs e)
@@ -303,23 +308,33 @@ namespace WinFormsApp
         // Navigation button handlers
         private void BtnCoinDetails_Click(object sender, EventArgs e)
         {
-            MessageBox.Show("Coin Details screen - Person 2's responsibility",
-                "Info", MessageBoxButtons.OK, MessageBoxIcon.Information);
-            HighlightButton(btnCoinDetails);
-
-            if (!this.GetType().Name.Equals("CoinDetailsForm"))
+            try
             {
-                var form = new CoinDetailsForm();
-                form.Show();
-                //this.Close();
+                // Pass shared services to maintain data consistency
+                var coinDetailsForm = new CoinDetailsForm(_cryptoService, _transactionService);
+                coinDetailsForm.Show();
+                //this.Hide();
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show($"Error opening coin details: {ex.Message}",
+                    "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
         }
 
         private void BtnTransactions_Click(object sender, EventArgs e)
         {
-            MessageBox.Show("Transactions screen - Person 3's responsibility",
-                "Info", MessageBoxButtons.OK, MessageBoxIcon.Information);
-            HighlightButton(btnTransactions);
+            try
+            {
+                var transactionsForm = new TransactionsForm(_transactionService, _cryptoService);
+                transactionsForm.Show();
+                this.Hide();
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show($"Error opening transactions form: {ex.Message}",
+                    "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
         }
 
         private void BtnTrending_Click(object sender, EventArgs e)
@@ -370,6 +385,9 @@ namespace WinFormsApp
         //    }
         //}
 
-
+        public void RefreshDashboardData()
+        {
+            RefreshDashboard();
+        }
     }
 }

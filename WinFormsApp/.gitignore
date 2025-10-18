@@ -1,0 +1,8 @@
+api_config.txt
+.vs/
+bin/
+obj/
+*.suo
+*.user
+*.cache
+
