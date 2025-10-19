@@ -14,6 +14,7 @@ namespace WinFormsApp.Models
         public decimal CurrentPrice { get; set; }
         public decimal Change24h { get; set; }    // Percentage change
         public decimal MarketCap { get; set; }
+        public int MarketCapRank { get; set; }
         public decimal Volume { get; set; }
 
         public Coin(string name, string symbol, decimal currentPrice,
@@ -27,6 +28,18 @@ namespace WinFormsApp.Models
             Volume = volume;
         }
 
+        public Coin(string name, string symbol, int marketCapRank, decimal price)
+        {
+            Name = name;
+            Symbol = symbol;
+            MarketCapRank = marketCapRank;
+            CurrentPrice = price;
+        }
+
+       
+
         public Coin(string name, string symbol) : this(name, symbol, 0, 0, 0, 0) { }
+
+
     }
 }

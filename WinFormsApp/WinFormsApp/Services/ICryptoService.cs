@@ -4,6 +4,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using WinFormsApp.Models;
+using PriceHistory = WinFormsApp.Models.CoinGeckoMarketData.PriceHistory;
 
 namespace WinFormsApp.Services
 {

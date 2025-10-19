@@ -246,27 +246,32 @@ namespace WinFormsApp
         {
             try
             {
+                // Clear any previous data
                 dgvPriceHistory.DataSource = null;
 
-                // Show loading message
-                var loadingHistory = new System.Collections.Generic.List<PriceHistory>
-                {
-                    new PriceHistory(DateTime.Now, 0, 0, 0, 0)
-                };
+                // Temporary "loading" placeholder
+                var loadingHistory = new List<CoinGeckoMarketData.PriceHistory>
+        {
+            new CoinGeckoMarketData.PriceHistory(DateTime.Now, 0, 0, 0, 0)
+        };
                 dgvPriceHistory.DataSource = loadingHistory;
 
-                // Fetch price history (makes API call or returns dummy data)
+                // Fetch price history from service (API call)
                 var history = await _cryptoService.GetPriceHistoryAsync(symbol);
 
-                // Display in DataGridView
+                // Display real data
                 dgvPriceHistory.DataSource = null;
                 dgvPriceHistory.DataSource = history;
             }
             catch (Exception ex)
             {
                 System.Diagnostics.Debug.WriteLine($"Error loading price history: {ex.Message}");
-                MessageBox.Show($"Could not load price history. Showing estimated data.",
-                    "Info", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                MessageBox.Show(
+                    "Could not load price history. Showing estimated data.",
+                    "Info",
+                    MessageBoxButtons.OK,
+                    MessageBoxIcon.Information
+                );
             }
         }
 

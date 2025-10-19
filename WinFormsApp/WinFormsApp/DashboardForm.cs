@@ -339,10 +339,21 @@ namespace WinFormsApp
 
         private void BtnTrending_Click(object sender, EventArgs e)
         {
-            MessageBox.Show("Trending screen - Bonus/split work",
-                "Info", MessageBoxButtons.OK, MessageBoxIcon.Information);
-            HighlightButton(btnTrending);
+            // Define your API key (real or demo)
+            string apiKey = "YOUR_API_KEY_HERE";
+
+            // You can pass null, or a second identifier object if needed
+            var coinGeckoApi = new CoinGeckoApiService(apiKey, apiKey);
+
+            // Open the Trending Coins form
+            var trendingForm = new Form3(coinGeckoApi);
+            trendingForm.Show();
+
+            // Hide current dashboard form
+            this.Hide();
         }
+
+
 
         private void HighlightButton(Button activeButton)
         {

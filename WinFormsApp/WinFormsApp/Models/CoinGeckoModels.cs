@@ -2,8 +2,9 @@
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
-using System.Threading.Tasks;
+using System.Text.Json;
 using System.Text.Json.Serialization;
+using System.Threading.Tasks;
 
 namespace WinFormsApp.Models
 {
@@ -48,48 +49,49 @@ namespace WinFormsApp.Models
                 TotalVolume
             );
         }
-    }
 
-    /// <summary>
-    /// Response model for CoinGecko /coins/{id}/market_chart endpoint
-    /// Used for historical price data
-    /// </summary>
-    public class CoinGeckoChartData
-    {
-        [JsonPropertyName("prices")]
-        public List<List<decimal>> Prices { get; set; }
 
-        public CoinGeckoChartData()
+        /// <summary>
+        /// Response model for CoinGecko /coins/{id}/market_chart endpoint
+        /// Used for historical price data
+        /// </summary>
+        public class CoinGeckoChartData
         {
-            Prices = new List<List<decimal>>();
-        }
-    }
+            [JsonPropertyName("prices")]
+            public List<List<decimal>> Prices { get; set; }
 
-    /// <summary>
-    /// Represents a single price point in history
-    /// Used for the 7-day price history display
-    /// </summary>
-    public class PriceHistory
-    {
-        public DateTime Date { get; set; }
-        public decimal Open { get; set; }
-        public decimal High { get; set; }
-        public decimal Low { get; set; }
-        public decimal Close { get; set; }
-        public decimal ChangePercentage { get; set; }
-
-        public PriceHistory(DateTime date, decimal open, decimal high, decimal low, decimal close)
-        {
-            Date = date;
-            Open = open;
-            High = high;
-            Low = low;
-            Close = close;
-
-            // Calculate percentage change
-            if (open > 0)
+            public CoinGeckoChartData()
             {
-                ChangePercentage = ((close - open) / open) * 100;
+                Prices = new List<List<decimal>>();
+            }
+        }
+
+        /// <summary>
+        /// Represents a single price point in history
+        /// Used for the 7-day price history display
+        /// </summary>
+        public class PriceHistory
+        {
+            public DateTime Date { get; set; }
+            public decimal Open { get; set; }
+            public decimal High { get; set; }
+            public decimal Low { get; set; }
+            public decimal Close { get; set; }
+            public decimal ChangePercentage { get; set; }
+
+            public PriceHistory(DateTime date, decimal open, decimal high, decimal low, decimal close)
+            {
+                Date = date;
+                Open = open;
+                High = high;
+                Low = low;
+                Close = close;
+
+                // Calculate percentage change
+                if (open > 0)
+                {
+                    ChangePercentage = ((close - open) / open) * 100;
+                }
             }
         }
     }

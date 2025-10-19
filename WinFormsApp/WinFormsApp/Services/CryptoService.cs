@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
 using WinFormsApp.Models;
+using static WinFormsApp.Models.CoinGeckoMarketData;
 
 namespace WinFormsApp.Services
 {
@@ -33,7 +34,7 @@ namespace WinFormsApp.Services
             {
                 if (!string.IsNullOrEmpty(apiKey) && apiKey != "YOUR_API_KEY_HERE")
                 {
-                    _apiService = new CoinGeckoApiService(apiKey);
+                    _apiService = new CoinGeckoApiService(apiKey, apiKey);
                     System.Diagnostics.Debug.WriteLine("✅ API service initialized with key");
                 }
                 else
@@ -252,6 +253,11 @@ namespace WinFormsApp.Services
             var source = _apiService != null ? "API available" : "Dummy data only";
 
             return $"Last refresh: {age.TotalMinutes:F1} min ago ({(isValid ? "Valid" : "Stale")}) - {source}";
+        }
+
+        Task<List<PriceHistory>> ICryptoService.GetPriceHistoryAsync(string symbol)
+        {
+            throw new NotImplementedException();
         }
     }
 }

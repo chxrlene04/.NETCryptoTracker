@@ -1,11 +1,13 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 using System.Net.Http;
 using System.Net.Http.Json;
+using System.Text;
+using System.Text.Json;
+using System.Threading.Tasks;
 using WinFormsApp.Models;
+using static WinFormsApp.Models.CoinGeckoMarketData;
 
 namespace WinFormsApp.Services
 {
@@ -20,6 +22,7 @@ namespace WinFormsApp.Services
         private readonly string _apiKey;
 
         // Coin IDs used by CoinGecko (different from symbols!)
+
         private readonly Dictionary<string, string> _coinIds = new Dictionary<string, string>
         {
             { "BTC", "bitcoin" },
@@ -35,7 +38,7 @@ namespace WinFormsApp.Services
         /// <summary>
         /// Constructor accepts API key for authentication
         /// </summary>
-        public CoinGeckoApiService(string apiKey)
+        public CoinGeckoApiService(string apiKey, object apikey)
         {
             if (string.IsNullOrWhiteSpace(apiKey))
             {
@@ -88,13 +91,50 @@ namespace WinFormsApp.Services
                 throw new Exception($"Error fetching coin data: {ex.Message}", ex);
             }
         }
+        public async Task<List<Coin>> GetAllTrendingCoinsAsync()
+        {
+            var response = await _httpClient.GetAsync($"{BASE_URL}/search/trending");
+            response.EnsureSuccessStatusCode();
+
+            using var stream = await response.Content.ReadAsStreamAsync();
+            using var doc = await JsonDocument.ParseAsync(stream);
+
+            var coins = doc.RootElement
+                .GetProperty("coins")
+                .EnumerateArray()
+                .Select(c =>
+                {
+                    var item = c.GetProperty("item");
+
+                    var name = item.GetProperty("name").GetString() ?? "";
+                    var symbol = item.GetProperty("symbol").GetString() ?? "";
+                    var rank = item.TryGetProperty("market_cap_rank", out var rankProp) && rankProp.ValueKind == JsonValueKind.Number
+                        ? rankProp.GetInt32()
+                        : 0;
+
+                    // price is nested inside "data"
+                    decimal price = 0;
+                    if (item.TryGetProperty("data", out var data) &&
+                        data.TryGetProperty("price", out var priceProp) &&
+                        priceProp.ValueKind == JsonValueKind.Number)
+                        price = priceProp.GetDecimal();
+
+                    // use your Coin constructor (name, symbol, rank, price)
+                    return new Coin(name, symbol, rank, price);
+                })
+                .ToList();
+
+            return coins;
+        }
+
 
         /// <summary>
         /// Fetches 7-day price history for a specific coin
         /// Used for the coin details screen
         /// </summary>
-        public async Task<List<PriceHistory>> GetPriceHistoryAsync(string symbol)
+        public async Task<List<CoinGeckoMarketData.PriceHistory>> GetPriceHistoryAsync(string symbol)
         {
+            
             try
             {
                 // Get the CoinGecko ID for this symbol
@@ -165,5 +205,7 @@ namespace WinFormsApp.Services
                 ? coinId
                 : null;
         }
+
+
     }
 }
