@@ -47,7 +47,7 @@ namespace WinFormsApp
 
         private async void DashboardForm_Load(object sender, EventArgs e)
         {
-            await LoadCoinData();
+            await LoadData();
         }
 
         private void WireUpEvents()
@@ -223,7 +223,7 @@ namespace WinFormsApp
             }
         }
 
-        private async Task LoadCoinData()
+        private async Task LoadData()
         {
             try
             {
@@ -239,36 +239,18 @@ namespace WinFormsApp
                     return;
                 }
 
-                // Merge live data into the portfolio
-                foreach (var item in portfolio)
-                {
-                    var liveCoin = liveCoins.FirstOrDefault(c =>
-                        c.Symbol.Equals(item.CoinSymbol, StringComparison.OrdinalIgnoreCase));
-
-                    if (liveCoin != null)
-                    {
-                        // Only update price; total/profit values will auto-recalculate
-                        item.CurrentPrice = liveCoin.CurrentPrice;
-                    }
-                }
-
-                // Update DataGridView
-                dgvPortfolio.DataSource = null;
                 dgvPortfolio.DataSource = portfolio;
-
-                // Update summary labels
                 lblTotalValue.Text = $"${_portfolioService.GetTotalPortfolioValue():N0}";
                 lblTotalInvested.Text = $"${_portfolioService.GetTotalInvested():N0}";
+                lblAssets.Text = _portfolioService.GetAssetCount().ToString();
 
                 var profitLoss = _portfolioService.GetTotalProfitLoss();
-                lblProfitLoss.Text = $"{(profitLoss >= 0 ? "+" : "")}${profitLoss:N0}";
+                lblProfitLoss.Text = $"{(profitLoss >= 0 ? "+" : "-")}${Math.Abs(profitLoss):N0}";
                 lblProfitLoss.ForeColor = profitLoss >= 0 ? Color.Green : Color.Red;
-
-                lblAssets.Text = _portfolioService.GetAssetCount().ToString();
             }
             catch (Exception ex)
             {
-                MessageBox.Show($"Error loading live data: {ex.Message}",
+                MessageBox.Show($"Error loading portfolio: {ex.Message}",
                     "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
         }
@@ -325,12 +307,12 @@ namespace WinFormsApp
         // Event Handlers
         private async void BtnRefresh_Click(object sender, EventArgs e)
         {
-            await LoadCoinData();
+            await LoadData();
         }
 
         //private void BtnRefresh_Click(object sender, EventArgs e)
         //{
-        //    try
+        //    tryn 
         //    {
         //        // Simulate price refresh
         //        _cryptoService.RefreshPrices();

@@ -1,15 +1,15 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\Charlene\\source\\repos\\.NETCryptoTracker\\WinFormsApp\\WinFormsApp\\WinFormsApp.csproj": {}
+    "C:\\Users\\Charlene\\Source\\Repos\\.NETCryptoTracker\\WinFormsApp\\WinFormsApp\\WinFormsApp.csproj": {}
   },
   "projects": {
-    "C:\\Users\\Charlene\\source\\repos\\.NETCryptoTracker\\WinFormsApp\\WinFormsApp\\WinFormsApp.csproj": {
+    "C:\\Users\\Charlene\\Source\\Repos\\.NETCryptoTracker\\WinFormsApp\\WinFormsApp\\WinFormsApp.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\Charlene\\source\\repos\\.NETCryptoTracker\\WinFormsApp\\WinFormsApp\\WinFormsApp.csproj",
+        "projectUniqueName": "C:\\Users\\Charlene\\Source\\Repos\\.NETCryptoTracker\\WinFormsApp\\WinFormsApp\\WinFormsApp.csproj",
         "projectName": "WinFormsApp",
-        "projectPath": "C:\\Users\\Charlene\\source\\repos\\.NETCryptoTracker\\WinFormsApp\\WinFormsApp\\WinFormsApp.csproj",
+        "projectPath": "C:\\Users\\Charlene\\Source\\Repos\\.NETCryptoTracker\\WinFormsApp\\WinFormsApp\\WinFormsApp.csproj",
         "packagesPath": "C:\\Users\\Charlene\\.nuget\\packages\\",
         "outputPath": "C:\\Users\\Charlene\\source\\repos\\.NETCryptoTracker\\WinFormsApp\\WinFormsApp\\obj\\",
         "projectStyle": "PackageReference",
