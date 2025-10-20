@@ -1,23 +1,23 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\Charlene\\Source\\Repos\\.NETCryptoTracker\\WinFormsApp\\WinFormsApp\\WinFormsApp.csproj": {}
+    "C:\\Users\\nicke\\Source\\Repos\\.NETCryptoTracker\\WinFormsApp\\WinFormsApp\\WinFormsApp.csproj": {}
   },
   "projects": {
-    "C:\\Users\\Charlene\\Source\\Repos\\.NETCryptoTracker\\WinFormsApp\\WinFormsApp\\WinFormsApp.csproj": {
+    "C:\\Users\\nicke\\Source\\Repos\\.NETCryptoTracker\\WinFormsApp\\WinFormsApp\\WinFormsApp.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\Charlene\\Source\\Repos\\.NETCryptoTracker\\WinFormsApp\\WinFormsApp\\WinFormsApp.csproj",
+        "projectUniqueName": "C:\\Users\\nicke\\Source\\Repos\\.NETCryptoTracker\\WinFormsApp\\WinFormsApp\\WinFormsApp.csproj",
         "projectName": "WinFormsApp",
-        "projectPath": "C:\\Users\\Charlene\\Source\\Repos\\.NETCryptoTracker\\WinFormsApp\\WinFormsApp\\WinFormsApp.csproj",
-        "packagesPath": "C:\\Users\\Charlene\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\Charlene\\source\\repos\\.NETCryptoTracker\\WinFormsApp\\WinFormsApp\\obj\\",
+        "projectPath": "C:\\Users\\nicke\\Source\\Repos\\.NETCryptoTracker\\WinFormsApp\\WinFormsApp\\WinFormsApp.csproj",
+        "packagesPath": "C:\\Users\\nicke\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\nicke\\Source\\Repos\\.NETCryptoTracker\\WinFormsApp\\WinFormsApp\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
         ],
         "configFilePaths": [
-          "C:\\Users\\Charlene\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Users\\nicke\\AppData\\Roaming\\NuGet\\NuGet.Config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
@@ -26,7 +26,6 @@
         ],
         "sources": {
           "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
-          "C:\\Program Files\\dotnet\\library-packs": {},
           "https://api.nuget.org/v3/index.json": {}
         },
         "frameworks": {

@@ -1,6 +1,4 @@
-﻿// ============================================
-// FILE: TransactionsForm.cs
-// ============================================
+﻿
 using System;
 using System.Drawing;
 using System.Linq;
@@ -21,7 +19,7 @@ namespace WinFormsApp
         /// </summary>
         public TransactionsForm(TransactionService transactionService, CryptoService cryptoService)
         {
-            InitializeComponent();
+            InitialiseComponent();
 
             _transactionService = transactionService ?? throw new ArgumentNullException(nameof(transactionService));
             _cryptoService = cryptoService ?? throw new ArgumentNullException(nameof(cryptoService));
@@ -433,16 +431,23 @@ namespace WinFormsApp
 
         private void BtnCoinDetails_Click(object sender, EventArgs e)
         {
-            MessageBox.Show("Coin Details screen - Person 2's responsibility",
-                "Info", MessageBoxButtons.OK, MessageBoxIcon.Information);
-            HighlightButton(btnCoinDetails);
+            try
+            {
+                var coinDetailsForm = new CoinDetailsForm(_cryptoService, _transactionService);
+                coinDetailsForm.Show();
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show($"Error opening coin details: {ex.Message}", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
         }
-
         private void BtnTrending_Click(object sender, EventArgs e)
         {
-            MessageBox.Show("Trending screen - Bonus/split work",
-                "Info", MessageBoxButtons.OK, MessageBoxIcon.Information);
-            HighlightButton(btnTrending);
+            string apiKey = "CG-soteDFybxG9PyLxHe3fAP3re";
+            var coinGeckoApi = new CoinGeckoApiService(apiKey, apiKey);
+            var trendingForm = new Form3(coinGeckoApi);
+            trendingForm.Show();
+            this.Hide();
         }
 
         private void NavigateToDashboard()
@@ -459,7 +464,7 @@ namespace WinFormsApp
                     dashboardForm.BringToFront();
                 }
 
-               // this.Close();
+               this.Close();
             }
             catch (Exception ex)
             {

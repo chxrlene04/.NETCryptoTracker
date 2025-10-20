@@ -7,10 +7,7 @@ using static WinFormsApp.Models.CoinGeckoMarketData;
 
 namespace WinFormsApp.Services
 {
-    /// <summary>
     /// Service for managing cryptocurrency data with API integration and caching
-    /// Implements smart caching to minimize API calls
-    /// </summary>
     public class CryptoService : ICryptoService
     {
         private List<Coin> _coins;
@@ -23,29 +20,29 @@ namespace WinFormsApp.Services
             _coins = new List<Coin>();
             _lastRefreshTime = DateTime.MinValue;
 
-            // Initialize with dummy data (fallback if API fails)
-            InitializeDummyData();
+            // (fallback if API fails)
+            InitialiseDummyData();
 
-            // TODO: REPLACE THIS WITH YOUR ACTUAL API KEY!
-            string apiKey = "CG-soteDFybxG9PyLxHe3fAP3re"; // ← PUT YOUR COINGECKO API KEY HERE
 
-            // Try to initialize API service with your key
+            string apiKey = "CG-soteDFybxG9PyLxHe3fAP3re"; // ← PUT COINGECKO API KEY HERE
+
+            // Try to initialise API service with  key
             try
             {
                 if (!string.IsNullOrEmpty(apiKey))
                 {
                     _apiService = new CoinGeckoApiService(apiKey, apiKey);
-                    System.Diagnostics.Debug.WriteLine("✅ API service initialized with key");
+                    System.Diagnostics.Debug.WriteLine("API service initialised with key");
                 }
                 else
                 {
                     _apiService = null;
-                    System.Diagnostics.Debug.WriteLine("⚠️ No API key - using dummy data only");
+                    System.Diagnostics.Debug.WriteLine(" No API key - using dummy data only");
                 }
             }
             catch (Exception ex)
             {
-                System.Diagnostics.Debug.WriteLine($"❌ API initialization failed: {ex.Message}");
+                System.Diagnostics.Debug.WriteLine($" API initialisation failed: {ex.Message}");
                 _apiService = null;
             }
         }
@@ -193,11 +190,10 @@ namespace WinFormsApp.Services
             }
         }
 
-        /// <summary>
-        /// Initializes dummy data as fallback
+
+        /// Initialises dummy data as fallback
         /// Used if API is unavailable or during development
-        /// </summary>
-        private void InitializeDummyData()
+        private void InitialiseDummyData()
         {
             _coins = new List<Coin>
             {
@@ -213,9 +209,9 @@ namespace WinFormsApp.Services
             _lastRefreshTime = DateTime.Now;
         }
 
-        /// <summary>
+
         /// Generates dummy price history as fallback
-        /// </summary>
+
         private List<PriceHistory> GenerateDummyPriceHistory(string symbol)
         {
             var coin = GetCoinBySymbol(symbol);
@@ -228,7 +224,7 @@ namespace WinFormsApp.Services
             for (int i = 6; i >= 0; i--)
             {
                 var date = DateTime.Now.Date.AddDays(-i);
-                var variance = (decimal)(random.NextDouble() * 0.1 - 0.05); // ±5%
+                var variance = (decimal)(random.NextDouble() * 0.1 - 0.05); 
                 var open = basePrice * (1 + variance);
                 var close = basePrice * (1 + variance * 1.2m);
                 var high = Math.Max(open, close) * 1.02m;
@@ -240,9 +236,8 @@ namespace WinFormsApp.Services
             return history;
         }
 
-        /// <summary>
-        /// Gets cache status information (useful for debugging)
-        /// </summary>
+ 
+        /// Gets cache status information 
         public string GetCacheStatus()
         {
             if (_lastRefreshTime == DateTime.MinValue)

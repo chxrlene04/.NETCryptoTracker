@@ -14,12 +14,10 @@ namespace WinFormsApp
         private readonly TransactionService _transactionService;
         private bool _isLoading = false;
 
-        /// <summary>
-        /// Constructor - accepts shared services to maintain data consistency
-        /// </summary>
+        /// Constructor 
         public CoinDetailsForm(CryptoService cryptoService, TransactionService transactionService)
         {
-            InitializeComponent();
+            InitialiseComponent();
 
             _cryptoService = cryptoService ?? throw new ArgumentNullException(nameof(cryptoService));
             _transactionService = transactionService ?? throw new ArgumentNullException(nameof(transactionService));
@@ -128,10 +126,8 @@ namespace WinFormsApp
             }
         }
 
-        /// <summary>
+
         /// Loads all available coins into the dropdown
-        /// This uses CACHED data - no API call unless cache is stale
-        /// </summary>
         private async void LoadCoinsAsync()
         {
             try
@@ -142,7 +138,7 @@ namespace WinFormsApp
                 cmbCoins.Items.Add("Loading...");
                 cmbCoins.SelectedIndex = 0;
 
-                // Get coins from service (uses cache if available, or calls API)
+                // Get coins from service
                 var coins = await _cryptoService.GetAllCoinsAsync();
 
                 cmbCoins.Items.Clear();
@@ -175,10 +171,8 @@ namespace WinFormsApp
             }
         }
 
-        /// <summary>
+
         /// Event handler for when user selects a different coin
-        /// This gets data from CACHE - no new API call!
-        /// </summary>
         private async void CmbCoins_SelectedIndexChanged(object sender, EventArgs e)
         {
             if (_isLoading || cmbCoins.SelectedItem == null) return;
@@ -189,11 +183,8 @@ namespace WinFormsApp
             await LoadCoinDetailsAsync(selectedItem.Coin.Symbol);
         }
 
-        /// <summary>
+
         /// Loads details for the selected coin
-        /// Current price/stats come from cache (instant)
-        /// Price history makes ONE API call per coin
-        /// </summary>
         private async Task LoadCoinDetailsAsync(string symbol)
         {
             try
@@ -202,7 +193,7 @@ namespace WinFormsApp
                 cmbCoins.Enabled = false;
                 btnAddToPortfolio.Enabled = false;
 
-                // Get current coin data from cache (instant - no API call)
+                // Get current coin data 
                 var coin = _cryptoService.GetCoinBySymbol(symbol);
 
                 if (coin == null)
@@ -223,7 +214,7 @@ namespace WinFormsApp
                 lblMarketCap.Text = FormatLargeNumber(coin.MarketCap);
                 lblVolume.Text = FormatLargeNumber(coin.Volume);
 
-                // Load price history (makes ONE API call per coin)
+                // Load price history 
                 await LoadPriceHistoryAsync(symbol);
             }
             catch (Exception ex)
@@ -238,10 +229,8 @@ namespace WinFormsApp
             }
         }
 
-        /// <summary>
+
         /// Loads 7-day price history for the selected coin
-        /// This makes ONE API call (or uses dummy data if API unavailable)
-        /// </summary>
         private async Task LoadPriceHistoryAsync(string symbol)
         {
             try
@@ -256,7 +245,7 @@ namespace WinFormsApp
         };
                 dgvPriceHistory.DataSource = loadingHistory;
 
-                // Fetch price history from service (API call)
+                // Fetch price history from service 
                 var history = await _cryptoService.GetPriceHistoryAsync(symbol);
 
                 // Display real data
@@ -275,9 +264,8 @@ namespace WinFormsApp
             }
         }
 
-        /// <summary>
-        /// Formats large numbers into readable format (e.g., $895B, $28.4B)
-        /// </summary>
+
+        /// Formats large numbers into readable format 
         private string FormatLargeNumber(decimal number)
         {
             if (number >= 1_000_000_000) // Billions
@@ -408,10 +396,10 @@ namespace WinFormsApp
             activeButton.ForeColor = Color.White;
         }
 
-        // Not used but keeping for compatibility
+        
         private void label1_Click(object sender, EventArgs e)
         {
-            // Empty - legacy code
+            
         }
 
         private void HighlightNav()
@@ -421,10 +409,8 @@ namespace WinFormsApp
         }
     }
 
-    /// <summary>
+
     /// Helper class for ComboBox items
-    /// Allows us to display "Bitcoin (BTC)" but access the full Coin object
-    /// </summary>
     public class CoinComboItem
     {
         public Coin Coin { get; set; }

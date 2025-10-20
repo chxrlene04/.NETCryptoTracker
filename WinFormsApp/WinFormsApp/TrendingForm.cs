@@ -5,7 +5,7 @@ namespace WinFormsApp
     {
         public TrendingForm()
         {
-            //InitializeComponent();
+            //InitialiseComponent();
         }
     }
 }

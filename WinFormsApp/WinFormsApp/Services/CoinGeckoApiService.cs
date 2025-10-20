@@ -11,17 +11,16 @@ using static WinFormsApp.Models.CoinGeckoMarketData;
 
 namespace WinFormsApp.Services
 {
-    /// <summary>
+
     /// Service for interacting with CoinGecko API
     /// Handles all HTTP requests, authentication, and rate limiting
-    /// </summary>
     public class CoinGeckoApiService
     {
         private readonly HttpClient _httpClient;
         private const string BASE_URL = "https://api.coingecko.com/api/v3";
         private readonly string _apiKey;
 
-        // Coin IDs used by CoinGecko (different from symbols!)
+        // Coin IDs used by CoinGecko 
 
         private readonly Dictionary<string, string> _coinIds = new Dictionary<string, string>
         {
@@ -35,9 +34,7 @@ namespace WinFormsApp.Services
             { "MATIC", "matic-network" }
         };
 
-        /// <summary>
         /// Constructor accepts API key for authentication
-        /// </summary>
         public CoinGeckoApiService(string apiKey, object apikey)
         {
             if (string.IsNullOrWhiteSpace(apiKey))
@@ -48,23 +45,23 @@ namespace WinFormsApp.Services
             _apiKey = apiKey;
             _httpClient = new HttpClient();
 
-            // Add API key to headers (RECOMMENDED method by CoinGecko)
+            // Add API key to headers 
             _httpClient.DefaultRequestHeaders.Add("x-cg-demo-api-key", _apiKey);
             _httpClient.DefaultRequestHeaders.Add("User-Agent", "CryptoTrackerApp/1.0");
         }
 
-        /// <summary>
+
         /// Fetches current market data for all coins we track
         /// This is the main method - ONE call gets all 8 coins!
-        /// </summary>
+
         public async Task<List<Coin>> GetAllCoinsAsync()
         {
             try
             {
-                // Build comma-separated list of coin IDs
+                // comma-separated list of coin IDs
                 var coinIdsString = string.Join(",", _coinIds.Values);
 
-                // CoinGecko API endpoint - gets multiple coins in one call!
+                // CoinGecko API endpoint 
                 var url = $"{BASE_URL}/coins/markets?" +
                          $"vs_currency=usd&" +
                          $"ids={coinIdsString}&" +
@@ -128,10 +125,9 @@ namespace WinFormsApp.Services
         }
 
 
-        /// <summary>
+
         /// Fetches 7-day price history for a specific coin
         /// Used for the coin details screen
-        /// </summary>
         public async Task<List<CoinGeckoMarketData.PriceHistory>> GetPriceHistoryAsync(string symbol)
         {
             
@@ -196,9 +192,9 @@ namespace WinFormsApp.Services
             }
         }
 
-        /// <summary>
+
         /// Gets the CoinGecko ID for a symbol (used internally)
-        /// </summary>
+
         public string GetCoinId(string symbol)
         {
             return _coinIds.TryGetValue(symbol.ToUpper(), out string coinId)

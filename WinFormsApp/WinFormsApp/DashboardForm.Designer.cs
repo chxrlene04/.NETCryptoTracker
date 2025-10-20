@@ -15,7 +15,7 @@
 
         #region Windows Form Designer generated code
 
-        private void InitializeComponent()
+        private void InitialiseComponent()
         {
             panelTopNav = new Panel();
             btnTrending = new Button();

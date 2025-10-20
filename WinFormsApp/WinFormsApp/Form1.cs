@@ -14,7 +14,7 @@ namespace WinFormsApp
     {
         public Form1()
         {
-            InitializeComponent();
+            InitialiseComponent();
         }
 
         private void button1_Click(object sender, EventArgs e)

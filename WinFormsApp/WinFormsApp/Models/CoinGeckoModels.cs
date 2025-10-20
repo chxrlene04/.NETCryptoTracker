@@ -8,10 +8,8 @@ using System.Threading.Tasks;
 
 namespace WinFormsApp.Models
 {
-    /// <summary>
     /// Response model for CoinGecko /coins/markets endpoint
     /// Maps to the JSON structure returned by the API
-    /// </summary>
     public class CoinGeckoMarketData
     {
         [JsonPropertyName("id")]
@@ -35,9 +33,8 @@ namespace WinFormsApp.Models
         [JsonPropertyName("price_change_percentage_24h")]
         public decimal PriceChangePercentage24h { get; set; }
 
-        /// <summary>
+
         /// Converts CoinGecko API data to our internal Coin model
-        /// </summary>
         public Coin ToCoin()
         {
             return new Coin(
@@ -51,10 +48,9 @@ namespace WinFormsApp.Models
         }
 
 
-        /// <summary>
+
         /// Response model for CoinGecko /coins/{id}/market_chart endpoint
         /// Used for historical price data
-        /// </summary>
         public class CoinGeckoChartData
         {
             [JsonPropertyName("prices")]
@@ -66,10 +62,8 @@ namespace WinFormsApp.Models
             }
         }
 
-        /// <summary>
         /// Represents a single price point in history
         /// Used for the 7-day price history display
-        /// </summary>
         public class PriceHistory
         {
             public DateTime Date { get; set; }

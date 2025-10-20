@@ -20,7 +20,7 @@ namespace WinFormsApp
 
         public Form3(CoinGeckoApiService coinGeckoService)
         {
-            InitializeComponent();
+            InitialiseComponent();
             _coinGeckoService = coinGeckoService; // instatiation in constuctor 
         }
 
@@ -101,7 +101,7 @@ namespace WinFormsApp
                 // Bind to DataGridView or ListView
                 dgvPortfolio.DataSource = trendingCoins;
 
-                // Optionally: Customize columns
+                // Optionally: Customise columns
                 dgvPortfolio.Columns["Name"].HeaderText = "Coin Name";
                 dgvPortfolio.Columns["Symbol"].HeaderText = "Symbol";
                 dgvPortfolio.Columns["MarketCapRank"].HeaderText = "Rank";
