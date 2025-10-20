@@ -29,7 +29,8 @@ namespace WinFormsApp
             _portfolioService = new PortfolioService(_transactionService, _cryptoService);
 
             // Load dummy data
-            LoadDummyTransactions();
+            //LoadDummyTransactions();
+            LoadCoinData();
 
             // Setup DataGridView
             SetupDataGridView();
@@ -217,6 +218,45 @@ namespace WinFormsApp
             }
         }
 
+        private async Task LoadCoinData()
+        {
+            try
+            {
+                var coins = await _cryptoService.GetAllCoinsAsync();
+
+                if (coins == null || coins.Count == 0)
+                {
+                    MessageBox.Show("No Data Found.", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                    return;
+                }
+
+                dgvPortfolio.DataSource = coins;
+
+                lblTotalValue.Text = $"${coins.Sum(c => c.Price):N0} USD";
+                lblAssets.Text = coins.Count.ToString();
+                lblProfitLoss.Text = "Live prices (USD)";
+
+                dgvPortfolio.CellFormatting += (s, e) =>
+                {
+                    if (dgvPortfolio.Columns[e.ColumnIndex].Name == "Change24h" && e.Value != null)
+                    {
+                        if (decimal.TryParse(e.Value.ToString(), out decimal change))
+                        {
+                            e.CellStyle.ForeColor = change >= 0 ? Color.Green : Color.Red;
+                            e.Value = $"{(change >= 0 ? "+" : "")}{change:N2}%";
+                            e.FormattingApplied = true;
+                        }
+                    }
+                };
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show($"Error loading live data: {ex.Message}",
+                    "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
+
+        }
+
         private void RefreshDashboard()
         {
             try
@@ -265,22 +305,28 @@ namespace WinFormsApp
         }
 
         // Event Handlers
-        private void BtnRefresh_Click(object sender, EventArgs e)
+        private async void BtnRefresh_Click(object sender, EventArgs e)
         {
-            try
-            {
-                // Simulate price refresh
-                _cryptoService.RefreshPrices();
-                RefreshDashboard();
-                MessageBox.Show("Prices refreshed successfully!",
-                    "Success", MessageBoxButtons.OK, MessageBoxIcon.Information);
-            }
-            catch (Exception ex)
-            {
-                MessageBox.Show($"Error refreshing prices: {ex.Message}",
-                    "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
-            }
+            await LoadCoinData();
         }
+
+        //private void BtnRefresh_Click(object sender, EventArgs e)
+        //{
+        //    try
+        //    {
+        //        // Simulate price refresh
+        //        _cryptoService.RefreshPrices();
+        //        RefreshDashboard();
+        //        MessageBox.Show("Prices refreshed successfully!",
+        //            "Success", MessageBoxButtons.OK, MessageBoxIcon.Information);
+        //    }
+        //    catch (Exception ex)
+        //    {
+        //        MessageBox.Show($"Error refreshing prices: {ex.Message}",
+        //            "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+        //    }
+        //}
+
 
         private void BtnViewTransactions_Click(object sender, EventArgs e)
         {
@@ -340,7 +386,7 @@ namespace WinFormsApp
         private void BtnTrending_Click(object sender, EventArgs e)
         {
             // Define your API key (real or demo)
-            string apiKey = "YOUR_API_KEY_HERE";
+            string apiKey = "CG-soteDFybxG9PyLxHe3fAP3re";
 
             // You can pass null, or a second identifier object if needed
             var coinGeckoApi = new CoinGeckoApiService(apiKey, apiKey);

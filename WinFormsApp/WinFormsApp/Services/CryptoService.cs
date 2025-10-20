@@ -27,12 +27,12 @@ namespace WinFormsApp.Services
             InitializeDummyData();
 
             // TODO: REPLACE THIS WITH YOUR ACTUAL API KEY!
-            string apiKey = "ASK NIC"; // ← PUT YOUR COINGECKO API KEY HERE
+            string apiKey = "CG-soteDFybxG9PyLxHe3fAP3re"; // ← PUT YOUR COINGECKO API KEY HERE
 
             // Try to initialize API service with your key
             try
             {
-                if (!string.IsNullOrEmpty(apiKey) && apiKey != "YOUR_API_KEY_HERE")
+                if (!string.IsNullOrEmpty(apiKey))
                 {
                     _apiService = new CoinGeckoApiService(apiKey, apiKey);
                     System.Diagnostics.Debug.WriteLine("✅ API service initialized with key");
