@@ -16,5 +16,8 @@
     <Compile Update="TransactionsForm.cs">
       <SubType>Form</SubType>
     </Compile>
+    <Compile Update="TrendingForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
   </ItemGroup>
 </Project>

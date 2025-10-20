@@ -30,7 +30,7 @@ namespace WinFormsApp
 
             // Load dummy data
             //LoadDummyTransactions();
-            LoadCoinData();
+            this.Load += DashboardForm_Load;
 
             // Setup DataGridView
             SetupDataGridView();
@@ -43,6 +43,11 @@ namespace WinFormsApp
 
             // Wire up event handlers
             WireUpEvents();
+        }
+
+        private async void DashboardForm_Load(object sender, EventArgs e)
+        {
+            await LoadCoinData();
         }
 
         private void WireUpEvents()
@@ -222,40 +227,53 @@ namespace WinFormsApp
         {
             try
             {
-                var coins = await _cryptoService.GetAllCoinsAsync();
+                // Get your saved portfolio (amounts, symbols)
+                var portfolio = _portfolioService.GetPortfolio();
 
-                if (coins == null || coins.Count == 0)
+                // Get live prices from CoinGecko
+                var liveCoins = await _cryptoService.GetAllCoinsAsync();
+
+                if (liveCoins == null || liveCoins.Count == 0)
                 {
-                    MessageBox.Show("No Data Found.", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                    MessageBox.Show("No live data found.", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
                     return;
                 }
 
-                dgvPortfolio.DataSource = coins;
-
-                lblTotalValue.Text = $"${coins.Sum(c => c.Price):N0} USD";
-                lblAssets.Text = coins.Count.ToString();
-                lblProfitLoss.Text = "Live prices (USD)";
-
-                dgvPortfolio.CellFormatting += (s, e) =>
+                // Merge live data into the portfolio
+                foreach (var item in portfolio)
                 {
-                    if (dgvPortfolio.Columns[e.ColumnIndex].Name == "Change24h" && e.Value != null)
+                    var liveCoin = liveCoins.FirstOrDefault(c =>
+                        c.Symbol.Equals(item.CoinSymbol, StringComparison.OrdinalIgnoreCase));
+
+                    if (liveCoin != null)
                     {
-                        if (decimal.TryParse(e.Value.ToString(), out decimal change))
-                        {
-                            e.CellStyle.ForeColor = change >= 0 ? Color.Green : Color.Red;
-                            e.Value = $"{(change >= 0 ? "+" : "")}{change:N2}%";
-                            e.FormattingApplied = true;
-                        }
+                        // Only update price; total/profit values will auto-recalculate
+                        item.CurrentPrice = liveCoin.CurrentPrice;
                     }
-                };
+                }
+
+                // Update DataGridView
+                dgvPortfolio.DataSource = null;
+                dgvPortfolio.DataSource = portfolio;
+
+                // Update summary labels
+                lblTotalValue.Text = $"${_portfolioService.GetTotalPortfolioValue():N0}";
+                lblTotalInvested.Text = $"${_portfolioService.GetTotalInvested():N0}";
+
+                var profitLoss = _portfolioService.GetTotalProfitLoss();
+                lblProfitLoss.Text = $"{(profitLoss >= 0 ? "+" : "")}${profitLoss:N0}";
+                lblProfitLoss.ForeColor = profitLoss >= 0 ? Color.Green : Color.Red;
+
+                lblAssets.Text = _portfolioService.GetAssetCount().ToString();
             }
             catch (Exception ex)
             {
                 MessageBox.Show($"Error loading live data: {ex.Message}",
                     "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
-
         }
+
+
 
         private void RefreshDashboard()
         {

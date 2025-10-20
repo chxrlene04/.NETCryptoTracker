@@ -1,23 +1,23 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\maxja\\source\\repos\\.NETCryptoTracker\\WinFormsApp\\WinFormsApp\\WinFormsApp.csproj": {}
+    "C:\\Users\\Charlene\\source\\repos\\.NETCryptoTracker\\WinFormsApp\\WinFormsApp\\WinFormsApp.csproj": {}
   },
   "projects": {
-    "C:\\Users\\maxja\\source\\repos\\.NETCryptoTracker\\WinFormsApp\\WinFormsApp\\WinFormsApp.csproj": {
+    "C:\\Users\\Charlene\\source\\repos\\.NETCryptoTracker\\WinFormsApp\\WinFormsApp\\WinFormsApp.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\maxja\\source\\repos\\.NETCryptoTracker\\WinFormsApp\\WinFormsApp\\WinFormsApp.csproj",
+        "projectUniqueName": "C:\\Users\\Charlene\\source\\repos\\.NETCryptoTracker\\WinFormsApp\\WinFormsApp\\WinFormsApp.csproj",
         "projectName": "WinFormsApp",
-        "projectPath": "C:\\Users\\maxja\\source\\repos\\.NETCryptoTracker\\WinFormsApp\\WinFormsApp\\WinFormsApp.csproj",
-        "packagesPath": "C:\\Users\\maxja\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\maxja\\source\\repos\\.NETCryptoTracker\\WinFormsApp\\WinFormsApp\\obj\\",
+        "projectPath": "C:\\Users\\Charlene\\source\\repos\\.NETCryptoTracker\\WinFormsApp\\WinFormsApp\\WinFormsApp.csproj",
+        "packagesPath": "C:\\Users\\Charlene\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\Charlene\\source\\repos\\.NETCryptoTracker\\WinFormsApp\\WinFormsApp\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
         ],
         "configFilePaths": [
-          "C:\\Users\\maxja\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Users\\Charlene\\AppData\\Roaming\\NuGet\\NuGet.Config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
@@ -26,6 +26,7 @@
         ],
         "sources": {
           "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
+          "C:\\Program Files\\dotnet\\library-packs": {},
           "https://api.nuget.org/v3/index.json": {}
         },
         "frameworks": {
@@ -44,7 +45,7 @@
           "auditLevel": "low",
           "auditMode": "direct"
         },
-        "SdkAnalysisLevel": "10.0.100"
+        "SdkAnalysisLevel": "9.0.300"
       },
       "frameworks": {
         "net8.0-windows7.0": {
@@ -78,7 +79,7 @@
               "privateAssets": "none"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\10.0.100-rc.2.25502.107/PortableRuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\9.0.305/PortableRuntimeIdentifierGraph.json"
         }
       }
     }
